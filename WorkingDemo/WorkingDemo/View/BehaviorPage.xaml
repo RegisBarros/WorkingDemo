@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:WorkingDemo.Behaviors"
+             x:Class="WorkingDemo.View.BehaviorPage">
+    <StackLayout Padding="40">
+        <Entry Placeholder="Enter an integer">
+            <Entry.Behaviors>
+                <behavior:IntValidationBehavior/>
+            </Entry.Behaviors>
+        </Entry>
+    </StackLayout>
+</ContentPage>

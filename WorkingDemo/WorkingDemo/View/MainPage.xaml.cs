@@ -20,5 +20,10 @@ namespace WorkingDemo
         {
             Navigation.PushAsync(new ListViewPage());
         }
+
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BehaviorPage());
+        }
     }
 }

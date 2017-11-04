@@ -38,8 +38,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Behaviors\IntValidationBehavior.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="ViewModel\ListViewModel.cs" />
+    <Compile Include="Converters\DoubleToIntConverter.cs" />
+    <Compile Include="View\BehaviorPage.xaml.cs">
+      <DependentUpon>BehaviorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ListViewPage.xaml.cs">
       <DependentUpon>ListViewPage.xaml</DependentUpon>
     </Compile>
@@ -75,7 +80,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="View\BehaviorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\Page2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
