@@ -25,5 +25,10 @@ namespace WorkingDemo
         {
             Navigation.PushAsync(new BehaviorPage());
         }
+
+        private void Button_Clicked_3(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MessagesPage());
+        }
     }
 }

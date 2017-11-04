@@ -1,5 +1,4 @@
-﻿using WorkingDemo.Model;
-using WorkingDemo.ViewModel;
+﻿using WorkingDemo.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
