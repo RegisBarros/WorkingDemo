@@ -1,17 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using WorkingDemo.Model;
-using static System.Math;
+using Xamarin.Forms;
 
 namespace WorkingDemo.ViewModel
 {
-    public class ListViewModel
+    public class ListViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<Person> People { get; set; }
+
+        public ICommand ItemSelectedCommand { get; private set; }
+
+        private string selectedItemText;
+
+        public string SelectedItemText
+        {
+            get { return selectedItemText; }
+            set
+            {
+                selectedItemText = value;
+                RaisePropertyChanged();
+            }
+        }
+
 
         public ListViewModel()
         {
@@ -25,11 +39,28 @@ namespace WorkingDemo.ViewModel
                 new Person() { FirstName = "Barack", LastName="Obama", Age=GenerateAge(rand), Address = "WA", ImageSource = "a4.jpg"},
                 new Person() { FirstName = "Donald", LastName="Trump", Age=GenerateAge(rand), Address = "LA", ImageSource = "a7.jpg"}
             };
+
+            ItemSelectedCommand = new Command<Person>(HandleItemSelected);
+        }
+
+        private void HandleItemSelected(Person person)
+        {
+            SelectedItemText = $"{person.FirstName} {person.LastName}";
         }
 
         public decimal GenerateAge(Random rand)
         {
             return (decimal)(35 + rand.NextDouble());
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void RaisePropertyChanged([CallerMemberName] string caller = "")
+        {
+            var changed = PropertyChanged;
+            if (changed == null)
+                return;
+
+            changed.Invoke(this, new PropertyChangedEventArgs(caller));
         }
     }
 }

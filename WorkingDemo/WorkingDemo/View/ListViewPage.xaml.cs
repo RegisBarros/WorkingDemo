@@ -19,16 +19,16 @@ namespace WorkingDemo.View
             BindingContext = ViewModel;
         }
 
-        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem == null)
-            {
-                return;
-            }
+        //private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    if (e.SelectedItem == null)
+        //    {
+        //        return;
+        //    }
 
-            var person = e.SelectedItem as Person;
+        //    var person = e.SelectedItem as Person;
 
-            DisplayAlert("Selected", person.FirstName, "OK");
-        }
+        //    DisplayAlert("Selected", person.FirstName, "OK");
+        //}
     }
 }
