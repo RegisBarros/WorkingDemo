@@ -3,17 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WorkingDemo.View.ListViewPage">
     <StackLayout Padding="20">
-        <ListView ItemsSource="{Binding People}">
+        <ListView ItemsSource="{Binding People}" HasUnevenRows="True" ItemSelected="ListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <!--<TextCell Text="{Binding Name}"
                               Detail="{Binding Address}"/>-->
 
-                    <ImageCell Text="{Binding Name}"
+                    <!--<ImageCell Text="{Binding Name}"
                                Detail="{Binding Address}"
                                ImageSource="{Binding ImageSource}"
                                TextColor="Black"
-                               DetailColor="Gray"/>
+                               DetailColor="Gray"/>-->
+                    <ViewCell>
+                        <ContentView>
+                            <StackLayout Padding="20">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding FirstName}" FontSize="20" FontAttributes="Bold"/>
+                                    <Label Text="{Binding LastName}" FontSize="20" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="{Binding Address}" FontSize="15"/>
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

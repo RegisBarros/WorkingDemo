@@ -16,12 +16,12 @@ namespace WorkingDemo.ViewModel
         {
             People = new ObservableCollection<Person>()
             {
-                new Person() { Name = "Jonh", Address = "NY", ImageSource = "a1.jpg" },
-                new Person() { Name = "Mary", Address = "NJ", ImageSource = "a3.jpg"},
-                new Person() { Name = "Paul", Address = "OK", ImageSource = "a2.jpg"},
-                new Person() { Name = "Fink", Address = "LA", ImageSource = "a5.jpg"},
-                new Person() { Name = "Obama", Address = "WA", ImageSource = "a4.jpg"},
-                new Person() { Name = "Trump", Address = "LA", ImageSource = "a7.jpg"}
+                new Person() { FirstName = "Jonh", LastName="Smith", Address = "NY", ImageSource = "a1.jpg" },
+                new Person() { FirstName = "Mary", LastName="Rosana", Address = "NJ", ImageSource = "a3.jpg"},
+                new Person() { FirstName = "Paul", LastName="McCarthy", Address = "OK", ImageSource = "a2.jpg"},
+                new Person() { FirstName = "Fink", LastName="Court", Address = "LA", ImageSource = "a5.jpg"},
+                new Person() { FirstName = "Barack", LastName="Obama", Address = "WA", ImageSource = "a4.jpg"},
+                new Person() { FirstName = "Donald", LastName="Trump", Address = "LA", ImageSource = "a7.jpg"}
             };
         }
     }
