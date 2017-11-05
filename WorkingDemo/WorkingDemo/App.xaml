@@ -6,11 +6,30 @@
 
 		<!-- Application resource dictionary -->
         <ResourceDictionary>
-            <Style TargetType="Label">
+            <!--<Style TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
                 <Setter Property="FontSize" Value="Large" />
                 <Setter Property="TextColor" Value="Red" />
+            </Style>-->
+
+            <Style x:Key="BaseStyle"  TargetType="View">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style TargetType="Label" BasedOn="{StaticResource BaseStyle}">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Red" />
+            </Style>
+
+            <Style TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="Blue" />
+            </Style>
+
+            <Style TargetType="Entry" BasedOn="{StaticResource BaseStyle}">
+                <Setter Property="FontSize" Value="Small" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

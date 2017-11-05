@@ -87,6 +87,8 @@
                                     <Label Text="{Binding LastName}" FontSize="20" FontAttributes="Bold"/>
                                 </StackLayout>
                                 <Label Text="{Binding Address}" FontSize="15"/>
+                                <Button Text="Click Me"/>
+                                <Entry Placeholder="Put text here" />
                             </StackLayout>
                         </ContentView>
                     </ViewCell>
