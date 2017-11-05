@@ -100,7 +100,8 @@
                                     <Label Text="{Binding FirstName}" FontSize="20" FontAttributes="Bold"/>
                                     <Label Text="{Binding LastName}" FontSize="20" FontAttributes="Bold"/>
                                 </StackLayout>
-                                <Label Text="{Binding PhoneNumber}" FontSize="15"/>
+                                <Label Text="{Binding PhoneNumber}" />
+                                <Button Text="Back to entry" Clicked="Button_Clicked" />
                             </StackLayout>
                         </ContentView>
                     </ViewCell>

@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using WorkingDemo.Data;
 using Xamarin.Forms;
 
 namespace WorkingDemo
 {
     public partial class App : Application
     {
+        static PersonDatabase database;
+
         public App()
         {
             InitializeComponent();
@@ -29,6 +31,19 @@ namespace WorkingDemo
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        public static PersonDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new PersonDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("PersonSQLite.db3"));
+                }
+
+                return database;
+            }
         }
     }
 }

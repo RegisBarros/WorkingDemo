@@ -17,7 +17,7 @@ namespace WorkingDemo.ViewModel
                 PhoneNumber = this.PhoneNumber
             };
 
-            Person.People.Add(person);
+            App.Database.SavePersonAsync(person);
         }
     }
 }

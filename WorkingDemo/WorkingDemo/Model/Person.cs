@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using SQLite;
+using System.Collections.Generic;
 
 namespace WorkingDemo.Model
 {
     public class Person
     {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -16,6 +20,6 @@ namespace WorkingDemo.Model
 
         public string PhoneNumber { get; set; }
 
-        public static List<Person> People { get; set; } = new List<Person>();
+        //public static List<Person> People { get; set; } = new List<Person>();
     }
 }

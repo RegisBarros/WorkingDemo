@@ -1,4 +1,5 @@
-﻿using WorkingDemo.ViewModel;
+﻿using System;
+using WorkingDemo.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,6 +17,11 @@ namespace WorkingDemo.View
             ViewModel = new ListViewModel();
 
             BindingContext = ViewModel;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EntryPage());
         }
 
         //private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
