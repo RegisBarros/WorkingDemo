@@ -11,6 +11,7 @@
             <Button Text="Go To ListView" Clicked="Button_Clicked_1"/>
             <Button Text="Go To Behaviors" Clicked="Button_Clicked_2"/>
             <Button Text="Go To Messages" Clicked="Button_Clicked_3"/>
+            <Button Text="Add People" Clicked="Button_Clicked_4"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
