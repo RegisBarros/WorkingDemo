@@ -102,6 +102,8 @@
                                 </StackLayout>
                                 <Label Text="{Binding PhoneNumber}" />
                                 <Button Text="Back to entry" Clicked="Button_Clicked" />
+                                <Button Text="Store" Clicked="OnStore" />
+                                <Button Text="Restore" Clicked="OnRestore" />
                             </StackLayout>
                         </ContentView>
                     </ViewCell>

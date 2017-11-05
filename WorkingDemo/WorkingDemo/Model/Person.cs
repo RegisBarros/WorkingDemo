@@ -1,11 +1,12 @@
 ﻿using SQLite;
 using System.Collections.Generic;
+using WorkingDemo.Data;
 
 namespace WorkingDemo.Model
 {
-    public class Person
+    public class Person : IEntity
     {
-        [PrimaryKey, AutoIncrement]
+        //[PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
         public string FirstName { get; set; }

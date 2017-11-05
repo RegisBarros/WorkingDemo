@@ -9,5 +9,6 @@
         </StackLayout>
         <Entry x:Name="PhoneNumberEntry" Placeholder="Phone Number" Text="{Binding PhoneNumber}" />
         <Button Text="Add" Clicked="AddEntry" />
+        <Button Text="Go To List" Clicked="Button_Clicked" />
     </StackLayout>
 </ContentPage>
