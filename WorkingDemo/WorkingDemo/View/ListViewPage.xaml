@@ -9,7 +9,7 @@
         <ResourceDictionary>
             <converters:DoubleToIntConverter x:Key="doubleToIntegerConverter" />
             <converters:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter"/>
-            <Style x:Key="BigRedLabel" TargetType="Label">
+            <!--<Style x:Key="BigRedLabel" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
                 <Setter Property="FontSize" Value="Large" />
@@ -26,6 +26,12 @@
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
                 <Setter Property="FontSize" Value="Small" />
                 <Setter Property="TextColor" Value="Green" />
+            </Style>-->
+            <Style TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Red" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -61,7 +67,7 @@
                     <!--<TextCell Text="{Binding FirstName}"
                               Detail="{Binding Age, Converter={StaticResource doubleToIntegerConverter}}"/>-->
 
-                    <ViewCell>
+                    <!--<ViewCell>
                         <ContentView>
                             <StackLayout Padding="20">
                                 <StackLayout Orientation="Horizontal">
@@ -69,6 +75,18 @@
                                     <Label Text="{Binding LastName}" Style="{StaticResource BigBlueLabel}" FontSize="20" FontAttributes="Bold"/>
                                 </StackLayout>
                                 <Label Text="{Binding Address}" Style="{StaticResource LittleGreenLabel}" FontSize="15"/>
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>-->
+
+                    <ViewCell>
+                        <ContentView>
+                            <StackLayout Padding="20">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding FirstName}" FontSize="20" FontAttributes="Bold"/>
+                                    <Label Text="{Binding LastName}" FontSize="20" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <Label Text="{Binding Address}" FontSize="15"/>
                             </StackLayout>
                         </ContentView>
                     </ViewCell>
