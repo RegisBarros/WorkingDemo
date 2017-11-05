@@ -27,12 +27,12 @@
                 <Setter Property="FontSize" Value="Small" />
                 <Setter Property="TextColor" Value="Green" />
             </Style>-->
-            <Style TargetType="Label">
+            <!--<Style TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
                 <Setter Property="FontSize" Value="Large" />
                 <Setter Property="TextColor" Value="Red" />
-            </Style>
+            </Style>-->
         </ResourceDictionary>
     </ContentPage.Resources>
 
