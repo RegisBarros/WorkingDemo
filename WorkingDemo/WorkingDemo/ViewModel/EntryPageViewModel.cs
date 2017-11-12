@@ -1,14 +1,23 @@
-﻿using WorkingDemo.Model;
+﻿using System.Windows.Input;
+using WorkingDemo.Model;
+using Xamarin.Forms;
 
 namespace WorkingDemo.ViewModel
 {
-    class EntryPageViewModel
+    public class EntryPageViewModel
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
 
-        public void AddToPeople()
+        public ICommand AddNewPerson { get; private set; }
+
+        public EntryPageViewModel()
+        {
+            AddNewPerson = new Command(HandleAddPerson);
+        }
+
+        private void HandleAddPerson()
         {
             var person = new Person()
             {
@@ -17,6 +26,7 @@ namespace WorkingDemo.ViewModel
                 PhoneNumber = this.PhoneNumber
             };
 
+            // Save in database SQLite
             App.Database.SavePersonAsync(person);
         }
     }
